@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>nooriplayer2024 | نوری پلیر 2024</title>
+  <meta name="description" content="سایت شخصی امیر علی نوری با بازی‌ها، فیلم‌ها و مقالات درسی">
+  <meta name="keywords" content="نوری, بازی, فیلم, وبلاگ, ایران, امیر علی نوری">
+  <meta name="author" content="Amir Ali Nouri">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <style>
+    body {
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      font-family: "Tahoma", "Segoe UI", Arial, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image: url('background.jpg');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center;
+      background-attachment: fixed; 
+      text-align: center;
+    }
+    
+    .wrapper {
+      width: 95%;
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(to bottom, #ECE9D8 0%, #F5F2E8 100%);
+      border: 2px outset #D4D0C8;
+      border-radius: 0;
+      box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    .title-bar {
+      background: linear-gradient(to bottom, #0997FF 0%, #0053EE 50%, #0F4C75 100%);
+      color: white;
+      padding: 4px 8px;
+      font-weight: bold;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #316AC5;
+    }
+    
+    .window-controls {
+      display: flex;
+      gap: 2px;
+    }
+    
+    .control-btn {
+      width: 16px;
+      height: 14px;
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border: 1px outset #D4D0C8;
+      font-size: 8px;
+      text-align: center;
+      line-height: 12px;
+      cursor: pointer;
+      color: black;
+    }
+    
+    .control-btn:hover {
+      background: linear-gradient(to bottom, #F5F2E8 0%, #ECE9D8 100%);
+    }
+    
+    .control-btn:active {
+      border: 1px inset #D4D0C8;
+    }
+    
+    header {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border-bottom: 1px solid #ACA899;
+      padding: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px;
+    }
+    
+    .xp-button {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border: 1px outset #D4D0C8;
+      color: black;
+      padding: 4px 12px;
+      font-family: "Tahoma", sans-serif;
+      font-size: 11px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      min-width: 80px;
+      text-align: center;
+    }
+    
+    .xp-button:hover {
+      background: linear-gradient(to bottom, #F5F2E8 0%, #ECE9D8 100%);
+      border: 1px outset #E3DFD8;
+    }
+    
+    .xp-button:active {
+      border: 1px inset #D4D0C8;
+      background: linear-gradient(to bottom, #D4D0C8 0%, #C8C4B8 100%);
+    }
+    
+    #maindiv {
+      padding: 16px;
+      background: linear-gradient(to bottom, #ECE9D8 0%, #F5F2E8 100%);
+      color: #000080;
+    }
+    
+    #welcome {
+      background: white;
+      border: 2px inset #D4D0C8;
+      padding: 16px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    
+    h1 {
+      color: #000080;
+      font-size: 14px;
+      margin: 8px 0;
+      font-weight: bold;
+    }
+    
+    h3 {
+      color: #000080;
+      margin: 16px 0 8px 0;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    
+    section {
+      margin: 16px 0;
+      padding: 16px;
+      background: white;
+      border: 2px inset #D4D0C8;
+      transition: all 0.3s ease;
+    }
+    
+    section:hover {
+      transform: translateY(-2px);
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
+    
+    section h4 {
+      color: #000080;
+      margin: 8px 0 12px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      font-weight: bold;
+      border-bottom: 1px solid #D4D0C8;
+      padding-bottom: 8px;
+    }
+    
+    .section-icon {
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(to bottom, #0997FF 0%, #0053EE 100%);
+      border: 1px outset #316AC5;
+      display: inline-block;
+      text-align: center;
+      line-height: 18px;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    
+    #textdiv {
+      background: white;
+      border: 2px inset #D4D0C8;
+      width: 95%;
+      text-align: right;
+      margin: 12px auto;
+      padding: 12px;
+      line-height: 1.6;
+    }
+    
+    #textdiv p {
+      margin: 0;
+      color: black;
+      font-size: 12px;
+      text-align: justify;
+    }
+    
+    #textdiv a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    
+    #textdiv:hover {
+      background: #F9F9F9;
+      border: 2px inset #C4C0B8;
+    }
+    
+    p {
+      font-size: 11px;
+      color: black;
+      margin: 8px 0;
+    }
+    
+    .intro-section {
+      background: linear-gradient(to bottom, #F0F8FF 0%, #E6F3FF 100%);
+      border: 2px inset #D4D0C8;
+      padding: 16px;
+      margin: 16px 0;
+      text-align: justify;
+      line-height: 1.8;
+    }
+    
+    .intro-section p {
+      font-size: 12px;
+      color: #000080;
+      margin: 8px 0;
+    }
+    
+    .social-links {
+      margin: 16px 0;
+      padding: 12px;
+      background: white;
+      border: 2px inset #D4D0C8;
+      text-align: center;
+    }
+    
+    footer {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      color: black;
+      text-align: center;
+      padding: 8px;
+      border-top: 1px solid #ACA899;
+      font-size: 11px;
+      font-weight: normal;
+    }
+    
+    a {
+      color: #0000EE;
+      text-decoration: none;
+      font-size: 11px;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+      color: #FF0000;
+    }
+    
+    a:visited {
+      color: #551A8B;
+    }
+    
+    .status-bar {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border-top: 1px solid #ACA899;
+      padding: 2px 8px;
+      font-size: 10px;
+      color: black;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      
+      .wrapper {
+        width: 98%;
+      }
+      
+      header {
+        gap: 2px;
+      }
+      
+      .xp-button {
+        padding: 3px 8px;
+        font-size: 10px;
+        min-width: 70px;
+      }
+      
+      h1 {
+        font-size: 12px;
+      }
+      
+      #welcome {
+        padding: 12px;
+      }
+      
+      section h4 {
+        flex-direction: column;
+        gap: 4px;
+      }
+      
+      #textdiv {
+        width: 98%;
+      }
+    }
+    
+    #today-date {
+      color: rgb(11, 0, 138);
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment-jalaali@0.10.1/moment-jalaali.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <br><br>
+  <div class="wrapper"> 
+    <div id="maindiv">
+      <header id="welcome">
+        <h1>سلام.من nooriplayer2024 هستم و به سایت من خوش آمدید.</h1>
+      </header>
+      <div id="today-date">تاریخ امروز:</div>
+      
+      <div class="intro-section">
+        <p>
+          خب، سلام. من امیر علی نوری هستم و این سایتمه. کدر تازه‌کارم، ماینکرافت پلی میدم، ویدیو میسازم و گاهی وقتا هم چیزایی یاد میگیرم.
+          اینجا هرچی که توی مغزم میاد میذارم - از ماینکرافت گرفته تا کد زدن و هر چرت و پرتی که دوست دارم بگم.
+        </p>
+        <p>
+          هدفم اینه که خودم یاد بگیرم و اگر کسی هم خواست همراهم باشه، خوشحال میشم. اگه حوصلت نیست، نیا. اگه هست، بشین ببین چی میگم.
+        </p>
+      </div>
+      <div>
+      <a href="video1.html"><button class="xp-button">ویدیو ها</button></a>
+      <a href="blog2.html"><button class="xp-button">وبلاگ</button></a>
+      <a href="sell.html"><button class="xp-button">کار هایی که انجام می دهم</button></a>
+      </div>
+      <section>
+        <h4>
+          <span class="section-icon">🎬</span>
+          ویدیوهای آموزشی و سرگرمی
+        </h4>
+        <div id="textdiv">
+          <a href="video1.html">
+            <p>
+              ویدیوهامو میذارم اینجا. ماینکرافت، کدنویسی، هر چی که دلم بخواد. بعضیا آموزشیه، بعضیا برای سرگرمیه.
+              اگه دوستون دارید نگاه کنید، اگه ندارید هم مشکلی نیست. خودم سرگرم میشم درست کردنشون.
+              راستش چیز خاصی نیستن ولی شاید براتون جالب باشه. میخوام ببینم کی نگاه میکنه و کی نمیکنه.
+            </p>
+          </a>
+        </div>
+      </section>
+      
+      <section>
+        <h4>
+          <span class="section-icon">📝</span>
+          وبلاگ و مقالات شخصی
+        </h4>
+        <div id="textdiv">
+          <a href="blog2.html">
+            <p>
+              وبلاگمه. هرچی که توی مغزم بیاد میذارم اینجا. گاهی درباره کد زدن، گاهی درباره بازی، گاهی هم درباره چیزای عجیب و غریب.
+              اصلاً منطقی نیست، ولی خب همینه که هست. اگه حوصله داری بخون، اگه نداری هم اصلاً مهم نیست.
+              بیشتر واسه خودمه تا یادم نره چی فکر میکردم. شاید بعداً بخوام برگردم ببینم چقدر احمق بودم.
+            </p>
+          </a>
+        </div>
+      </section>
+      
+      <section>
+        <h4>
+          <span class="section-icon">💻</span>
+          خدمات توسعه وب
+        </h4>
+        <div id="textdiv">
+          <a href="sell.html">
+            <p>
+              میخوای سایت؟ برات میسازم. استایل من بیشتر قدیمیه - همون چیزی که الان میبینی - ولی مدرن هم بلدم.
+              قیمت؟ بستگی داره چی میخوای. ساده باشه، ارزون. پیچیده باشه، گرون. خیلی هم زیاد انتظار نداشته باش.
+              تازه شروع کردم، ولی سعی میکنم کار درستی تحویل بدم. اگه دلت میخواد یه سایت قدیمی و عجیب داشته باشی، پیام بده.
+            </p>
+          </a>
+        </div>
+      </section>
+      
+      <div class="social-links">
+        <p>
+          <a href="https://rubika.ir/joing/+IBHGHGAE0MAQKIAKUBNQMFPFQMOWQZNP">روبیکا</a> | 
+          <a href="https://virasty.com/Noori0688">ویراستی</a> |
+          <a href="https://t.me/+KzmIldWFBog2YjA0">تلگرام</a>
+        </p>
+      </div>
+    </div>
+    
+    <footer>
+      برای امیر علی نوری. 09360140688
+    </footer>
+  </div>
+  <br><br>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        calendar: 'persian',
+        numberingSystem: 'arab'
+      };
+      const today = new Date();
+      const persianDate = today.toLocaleDateString('fa-IR', options);
+      document.getElementById('today-date').textContent = 'تاریخ امروز: ' + persianDate;
+
+      gsap.to(".blogc", {
+        duration: 1.2,
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        ease: "back.out(1.2)"
+      });
+      
+      document.querySelector('.blogc')?.classList.add('fade-in');
+      
+      // این بخش که مانع کلیک بود حذف شده
+    });
+  </script>
+</body>
+</html>

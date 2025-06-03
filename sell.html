@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>nooriplayer shop</title>
+  <meta name="description" content="سایت شخصی امیر علی نوری با بازی‌ها، فیلم‌ها و مقالات درسی">
+  <meta name="keywords" content="نوری, بازی, فیلم, وبلاگ, ایران, امیر علی نوری">
+  <meta name="author" content="Amir Ali Nouri">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <style>
+    body {
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      font-family: "Tahoma", "Segoe UI", Arial, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image: url('sell.jpg');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center;
+      background-attachment: fixed; 
+    }
+    
+    .wrapper {
+      width: 95%;
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(to bottom, #ECE9D8 0%, #F5F2E8 100%);
+      border: 2px outset #D4D0C8;
+      border-radius: 0;
+      box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    .title-bar {
+      background: linear-gradient(to bottom, #0997FF 0%, #0053EE 50%, #0F4C75 100%);
+      color: white;
+      padding: 4px 8px;
+      font-weight: bold;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #316AC5;
+    }
+    
+    .window-controls {
+      display: flex;
+      gap: 2px;
+    }
+    
+    .control-btn {
+      width: 16px;
+      height: 14px;
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border: 1px outset #D4D0C8;
+      font-size: 8px;
+      text-align: center;
+      line-height: 12px;
+      cursor: pointer;
+      color: black;
+    }
+    
+    .control-btn:hover {
+      background: linear-gradient(to bottom, #F5F2E8 0%, #ECE9D8 100%);
+    }
+    
+    .control-btn:active {
+      border: 1px inset #D4D0C8;
+    }
+    
+    header {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border-bottom: 1px solid #ACA899;
+      padding: 8px;
+      text-align: center;
+    }
+    
+    .xp-button {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border: 1px outset #D4D0C8;
+      color: black;
+      padding: 4px 12px;
+      font-family: "Tahoma", sans-serif;
+      font-size: 11px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      min-width: 80px;
+      text-align: center;
+    }
+    
+    .xp-button:hover {
+      background: linear-gradient(to bottom, #F5F2E8 0%, #ECE9D8 100%);
+      border: 1px outset #E3DFD8;
+    }
+    
+    .xp-button:active {
+      border: 1px inset #D4D0C8;
+      background: linear-gradient(to bottom, #D4D0C8 0%, #C8C4B8 100%);
+    }
+    
+    .xp-button.primary {
+      background: linear-gradient(to bottom, #FFE6CC 0%, #FFCC99 100%);
+      border: 1px outset #FFCC99;
+      color: #000080;
+      font-weight: bold;
+    }
+    
+    .xp-button.primary:hover {
+      background: linear-gradient(to bottom, #FFF0E6 0%, #FFE6CC 100%);
+    }
+    
+    #maindiv {
+      padding: 16px;
+      background: linear-gradient(to bottom, #ECE9D8 0%, #F5F2E8 100%);
+      color: #000080;
+      text-align: center;
+    }
+    
+    h2 {
+      color: #000080;
+      font-size: 14px;
+      margin: 12px 0;
+      font-weight: bold;
+    }
+    
+    .movie {
+      background: white;
+      border: 2px inset #D4D0C8;
+      width: 90%;
+      max-width: 500px;
+      color: black;
+      margin: 16px auto;
+      padding: 16px;
+      box-sizing: border-box;
+      text-align: right;
+    }
+    
+    .movie h3 {
+      color: #000080;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 8px 0;
+      text-align: center;
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      padding: 4px;
+      border: 1px outset #D4D0C8;
+    }
+    
+    .movie h4 {
+      color: #800000;
+      font-size: 11px;
+      font-weight: bold;
+      text-align: center;
+      background: #FFFFCC;
+      padding: 4px;
+      border: 1px solid #CCCC99;
+    }
+    
+    .movie p {
+      font-size: 11px;
+      margin: 8px 0;
+      text-align: center;
+    }
+    
+    .movie li {
+      font-size: 10px;
+      margin: 4px 0;
+      text-align: right;
+    }
+    
+    footer {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      color: black;
+      text-align: center;
+      padding: 8px;
+      border-top: 1px solid #ACA899;
+      font-size: 11px;
+      font-weight: normal;
+    }
+    
+    a:link {
+      color: #0000EE;
+      text-decoration: none;
+    }
+    
+    a:visited {
+      color: #551A8B;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+      color: #FF0000;
+    }
+    
+    .status-bar {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border-top: 1px solid #ACA899;
+      padding: 2px 8px;
+      font-size: 10px;
+      color: black;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      
+      .wrapper {
+        width: 98%;
+      }
+      
+      .movie {
+        width: 95%;
+        padding: 12px;
+      }
+      
+      .xp-button {
+        padding: 3px 8px;
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <br><br>
+  <div class="wrapper">
+   
+    <header>
+      <a href="index.html" class="xp-button">🏠 صفحه اصلی</a>
+    </header>
+    
+    <div id="maindiv">
+      <h2>کار هایی که انجام میدهم</h2>
+      <a href="https://survey.porsline.ir/s/ZDfM0tcs" class="xp-button primary">📝 سفارش</a>
+      
+      <div class="movie">
+        <h3>💻 سایت پیشرفته سازی</h3>
+        <p>برای شما سایت طراحی می کنم</p>
+        <li>حرفه ای ترین شیوه</li>
+        <li>در صورت پرداخت پول سرور برای شما سرور را راه اندازی می کنیم.</li>
+        <h4>قیمت پایه: 1,030,000 تومان</h4>
+      </div>
+      <div class="movie">
+        <h3>💻 وردپرس سازی</h3>
+        <p>برای شما سایت طراحی می کنم</p>
+        <li>میتوانید کنترلش کنید از گوشیتان</li>
+        <li>مناسب برای وبلاگ</li>
+        <li>در صورت پرداخت پول سرور برای شما سرور را راه اندازی می کنیم.</li>
+        <h4>قیمت پایه: 121,000 تومان</h4>
+      </div>
+      <div class="movie">
+        <h3>💻 گوگل سایت سازی</h3>
+        <p>شما سایت را طراحی می کنید</p>
+        <li>می توانید کنترلش کنید از گوشیتان</li>
+        <li>مناسب برای سایت های مناسبتی و برای مدت زمان کوتاه اما احمقانه</li>
+        <li>سرور رایگان</li>
+        <h4>قیمت پایه: 0 تومان</h4>
+      </div>
+      <div class="movie">
+        <h3>💻 سایت گیت هاب سازی</h3>
+        <p>من سایت را طراحی می کنم اما سرور روی اکانت گیت هاب شما است و کد سایت را بقیه می بینند</p>
+        <li>نمی توانید کنترلش کنید از گوشیتان</li>
+        <li>مناسب برای سایت های مناسبتی و برای مدت زمان کوتاه اما حرفه ای</li>
+        <li>سرور رایگان</li>
+        <h4>قیمت پایه: 600,000 تومان</h4>
+      </div>
+      <div class="movie">
+        <h3>💻 سایت ورد سازی</h3>
+        <p>فایل وردی که لینک دارد و آنلاین می تواند دیده شود.</p>
+        <li>می توانید کنترلش کنید از گوشیتان</li>
+        <li>مناسب برای رزومه</li>
+        <li>سرور رایگان</li>
+        <h4>قیمت پایه: 5,000 تومان</h4>
+      </div>
+    <footer>
+      برای امیر علی نوری. 09360140688
+    </footer>
+  </div>
+      <br><br>
+</body>
+</html>

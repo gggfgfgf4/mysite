@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>nooriplayer videos</title>
+  <meta name="description" content="سایت شخصی امیر علی نوری با بازی‌ها، فیلم‌ها و مقالات درسی">
+  <meta name="keywords" content="نوری, بازی, فیلم, وبلاگ, ایران, امیر علی نوری">
+  <meta name="author" content="Amir Ali Nouri">
+  <style>
+    body {
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      font-family: "Tahoma", "Segoe UI", Arial, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image: url('video1.jpg');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center;
+      background-attachment: fixed; 
+    }
+    
+    .wrapper {
+      width: 95%;
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(to bottom, #ECE9D8 0%, #F5F2E8 100%);
+      border: 2px outset #D4D0C8;
+      border-radius: 0;
+      box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+    }
+    
+    .title-bar {
+      background: linear-gradient(to bottom, #0997FF 0%, #0053EE 50%, #0F4C75 100%);
+      color: white;
+      padding: 4px 8px;
+      font-weight: bold;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #316AC5;
+    }
+    
+    .window-controls {
+      display: flex;
+      gap: 2px;
+    }
+    
+    .control-btn {
+      width: 16px;
+      height: 14px;
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border: 1px outset #D4D0C8;
+      font-size: 8px;
+      text-align: center;
+      line-height: 12px;
+      cursor: pointer;
+      color: black;
+    }
+    
+    .control-btn:hover {
+      background: linear-gradient(to bottom, #F5F2E8 0%, #ECE9D8 100%);
+    }
+    
+    .control-btn:active {
+      border: 1px inset #D4D0C8;
+    }
+    
+    header {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border-bottom: 1px solid #ACA899;
+      padding: 8px;
+      text-align: center;
+    }
+    
+    .xp-button {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border: 1px outset #D4D0C8;
+      color: black;
+      padding: 4px 12px;
+      font-family: "Tahoma", sans-serif;
+      font-size: 11px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      min-width: 80px;
+      text-align: center;
+    }
+    
+    .xp-button:hover {
+      background: linear-gradient(to bottom, #F5F2E8 0%, #ECE9D8 100%);
+      border: 1px outset #E3DFD8;
+    }
+    
+    .xp-button:active {
+      border: 1px inset #D4D0C8;
+      background: linear-gradient(to bottom, #D4D0C8 0%, #C8C4B8 100%);
+    }
+
+    .search-section {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border-bottom: 1px solid #ACA899;
+      padding: 12px;
+      text-align: center;
+    }
+    
+    .search-box {
+      width: 60%;
+      max-width: 300px;
+      padding: 4px 8px;
+      border: 2px inset #D4D0C8;
+      background: white;
+      font-family: "Tahoma", sans-serif;
+      font-size: 11px;
+      margin-bottom: 8px;
+      text-align: right;
+    }
+    
+    .category-filter {
+      margin-top: 8px;
+    }
+    
+    .category-btn {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border: 1px outset #D4D0C8;
+      color: black;
+      padding: 3px 10px;
+      font-family: "Tahoma", sans-serif;
+      font-size: 10px;
+      cursor: pointer;
+      margin: 2px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    
+    .category-btn:hover {
+      background: linear-gradient(to bottom, #F5F2E8 0%, #ECE9D8 100%);
+    }
+    
+    .category-btn.active {
+      background: linear-gradient(to bottom, #0997FF 0%, #0053EE 100%);
+      color: white;
+      border: 1px inset #D4D0C8;
+    }
+    
+    #maindiv {
+      padding: 16px;
+      background: linear-gradient(to bottom, #ECE9D8 0%, #F5F2E8 100%);
+      color: #000080;
+      text-align: center;
+    }
+    
+    h2 {
+      color: #000080;
+      font-size: 14px;
+      margin: 12px 0;
+      font-weight: bold;
+    }
+    
+    .movie {
+      background: white;
+      border: 2px inset #D4D0C8;
+      width: 90%;
+      max-width: 500px;
+      color: black;
+      margin: 16px auto;
+      padding: 16px;
+      box-sizing: border-box;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .movie:hover {
+      background: #F8F8F8;
+      border: 2px outset #D4D0C8;
+      transform: translateY(-2px);
+    }
+    
+    .movie h3 {
+      color: #000080;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 8px 0;
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      padding: 4px;
+      border: 1px outset #D4D0C8;
+    }
+    
+    .movie video {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      border: 2px inset #D4D0C8;
+      background: #C0C0C0;
+    }
+    
+    .video-placeholder {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(45deg, #C0C0C0 25%, transparent 25%), 
+                  linear-gradient(-45deg, #C0C0C0 25%, transparent 25%),
+                  linear-gradient(45deg, transparent 75%, #C0C0C0 75%), 
+                  linear-gradient(-45deg, transparent 75%, #C0C0C0 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      border: 2px inset #D4D0C8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 12px;
+    }
+
+    .no-results {
+      color: #666;
+      font-size: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    footer {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      color: black;
+      text-align: center;
+      padding: 8px;
+      border-top: 1px solid #ACA899;
+      font-size: 11px;
+      font-weight: normal;
+    }
+    
+    a:link {
+      color: #0000EE;
+      text-decoration: none;
+    }
+    
+    a:visited {
+      color: #551A8B;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+      color: #FF0000;
+    }
+    
+    .status-bar {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border-top: 1px solid #ACA899;
+      padding: 2px 8px;
+      font-size: 10px;
+      color: black;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .video-player-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .modal-video {
+      width: 100%;
+      height: auto;
+      max-height: 70vh;
+    }
+
+    .close-modal {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+
+    .close-modal:hover {
+      color: #ccc;
+    }
+
+    .modal-title {
+      color: white;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      
+      .wrapper {
+        width: 98%;
+      }
+      
+      .movie {
+        width: 95%;
+        padding: 12px;
+      }
+      
+      .xp-button {
+        padding: 3px 8px;
+        font-size: 10px;
+      }
+
+      .search-box {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <br><br>
+  <div class="wrapper">
+
+    <header>
+      <a href="index.html"><button class="xp-button">🏠 صفحه اصلی</button></a>
+    </header>
+
+    <div class="search-section">
+      <input type="text" id="searchBox" class="search-box" placeholder="جستجوی ویدیو...">
+      <div class="category-filter">
+        <button class="category-btn active" data-category="all">همه</button>
+        <button class="category-btn" data-category="gaming">گیمینگ</button>
+        <button class="category-btn" data-category="tutorial">آموزشی</button>
+        <button class="category-btn" data-category="program">کد نویسی</button>
+        <button class="category-btn" data-category="movie">فیلم</button>
+      </div>
+    </div>
+    
+    <div id="maindiv">
+      <h2 id="pageTitle">همه ویدیو ها</h2>
+      
+      <div class="movie" data-category="gaming" data-title="بازی آدم کش" data-video="vi1.mp4">
+        <div class="video-placeholder">
+          📹 کلیک کنید برای پخش
+        </div>
+        <h3>🎮 بازی آدم کش</h3>
+      </div>
+
+      <div id="noResults" class="no-results" style="display: none;">
+        هیچ ویدیویی یافت نشد
+      </div>
+    </div>
+    
+    <footer>
+      © 2024 امیر علی نوری. 09360140688
+    </footer>
+  </div>
+
+  <div id="videoModal" class="video-player-modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3 class="modal-title" id="modalTitle"></h3>
+      <video id="modalVideo" class="modal-video" controls>
+        <source id="videoSource" src="" type="video/mp4">
+        مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+      </video>
+    </div>
+  </div>
+  
+  <br><br>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeApp();
+    });
+
+    function initializeApp() {
+      const searchBox = document.getElementById('searchBox');
+      if (searchBox) {
+        searchBox.addEventListener('input', handleSearch);
+      }
+
+      const categoryBtns = document.querySelectorAll('.category-btn');
+      categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const category = this.getAttribute('data-category');
+          filterByCategory(category, this);
+        });
+      });
+
+      const movies = document.querySelectorAll('.movie');
+      movies.forEach(movie => {
+        movie.addEventListener('click', function() {
+          const videoFile = this.getAttribute('data-video');
+          const videoTitle = this.getAttribute('data-title');
+          playVideo(videoFile, videoTitle);
+        });
+      });
+
+      const modal = document.getElementById('videoModal');
+      const closeBtn = document.querySelector('.close-modal');
+      
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+      }
+      
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+      }
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeModal();
+        }
+      });
+    }
+
+    function handleSearch() {
+      const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+      const movies = document.querySelectorAll('.movie');
+      let hasResults = false;
+
+      movies.forEach(movie => {
+        const title = movie.getAttribute('data-title').toLowerCase();
+        if (title.includes(searchTerm)) {
+          movie.style.display = 'block';
+          hasResults = true;
+        } else {
+          movie.style.display = 'none';
+        }
+      });
+
+      const noResults = document.getElementById('noResults');
+      if (noResults) {
+        noResults.style.display = hasResults ? 'none' : 'block';
+      }
+    }
+
+    function filterByCategory(category, element) {
+      const movies = document.querySelectorAll('.movie');
+      const categoryBtns = document.querySelectorAll('.category-btn');
+      const pageTitle = document.getElementById('pageTitle');
+      let hasResults = false;
+
+      categoryBtns.forEach(btn => btn.classList.remove('active'));
+      element.classList.add('active');
+
+      const categoryTitles = {
+        'all': 'همه ویدیو ها',
+        'gaming': '🎮 ویدیو های گیمینگ',
+        'tutorial': '📚 ویدیو های آموزشی', 
+        'movie': '🎬 فیلم ها',
+        'music': '🎵 ویدیو های موزیک'
+      };
+      
+      if (pageTitle) {
+        pageTitle.textContent = categoryTitles[category] || 'همه ویدیو ها';
+      }
+
+      movies.forEach(movie => {
+        const movieCategory = movie.getAttribute('data-category');
+        if (category === 'all' || movieCategory === category) {
+          movie.style.display = 'block';
+          hasResults = true;
+        } else {
+          movie.style.display = 'none';
+        }
+      });
+
+      const noResults = document.getElementById('noResults');
+      if (noResults) {
+        noResults.style.display = hasResults ? 'none' : 'block';
+      }
+      
+      const searchBox = document.getElementById('searchBox');
+      if (searchBox) {
+        searchBox.value = '';
+      }
+    }
+
+    function playVideo(videoFile, videoTitle) {
+      const modal = document.getElementById('videoModal');
+      const modalTitle = document.getElementById('modalTitle');
+      const videoSource = document.getElementById('videoSource');
+      const modalVideo = document.getElementById('modalVideo');
+
+      if (modal && modalTitle && videoSource && modalVideo) {
+        modalTitle.textContent = videoTitle;
+        videoSource.src = videoFile;
+        modalVideo.load(); 
+        modal.style.display = 'block';
+        
+        setTimeout(() => {
+          modalVideo.play().catch(e => {
+            console.log('خطا در پخش ویدیو:', e);
+            alert('متأسفانه این ویدیو در دسترس نیست یا فایل ویدیو وجود ندارد.');
+          });
+        }, 100);
+      }
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('videoModal');
+      const modalVideo = document.getElementById('modalVideo');
+      
+      if (modal) {
+        modal.style.display = 'none';
+      }
+      
+      if (modalVideo) {
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+      }
+    }
+
+    function goHome() {
+      alert('صفحه اصلی - این دکمه به صفحه اصلی منتقل می‌شود');
+    }
+  </script>
+</body>
+</html>

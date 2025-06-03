@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>وبلاگ | nooriplayer2024</title>
+  <meta name="description" content="وبلاگ شخصی امیر علی نوری">
+  <meta name="keywords" content="نوری, وبلاگ, مقالات, امیر علی نوری">
+  <meta name="author" content="Amir Ali Nouri">
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <style>
+    body {
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+      font-family: "Tahoma", "Segoe UI", Arial, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image: url('sell.jpg');
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center;
+      background-attachment: fixed; 
+    }
+
+    .window {
+      background: #ECE9D8;
+      border: 1px solid #0054E3;
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+      margin: 0 auto 30px auto;
+      max-width: 800px;
+      width: 95%;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .control-btn {
+      width: 21px;
+      height: 21px;
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border: 1px outset #D4D0C8;
+      font-size: 11px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: black;
+    }
+    
+    .control-btn:hover {
+      background: linear-gradient(to bottom, #F5F2E8 0%, #ECE9D8 100%);
+    }
+    
+    .control-btn:active {
+      border: 1px inset #D4D0C8;
+    }
+    
+    .menu-bar {
+      background: #ECE9D8;
+      border-bottom: 1px solid #ACA899;
+      padding: 4px;
+      display: flex;
+      gap: 2px;
+    }
+    
+    .menu-item {
+      background: transparent;
+      border: 1px solid transparent;
+      color: black;
+      padding: 4px 8px;
+      font-family: Tahoma, Arial, sans-serif;
+      font-size: 11px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 0;
+    }
+    
+    .menu-item:hover {
+      background: #316AC5;
+      color: white;
+      border: 1px solid #2158B3;
+    }
+    
+    .menu-item:active {
+      background: #1E4A8C;
+    }
+    
+    .content-area {
+      background: white;
+      min-height: 400px;
+      padding: 16px;
+      overflow-y: auto;
+    }
+    
+    .status-bar {
+      background: #ECE9D8;
+      border-top: 1px solid #ACA899;
+      padding: 4px 8px;
+      font-size: 11px;
+      color: black;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .sponsor-section {
+      background: linear-gradient(to bottom, #2A4B66 0%, #1E3A52 50%, #1A2F42 100%);
+      border: 2px inset #D4D0C8;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 16px;
+      border-radius: 4px;
+    }
+    
+    .sponsor-link {
+      color: #FFE4B5;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 12px;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 8px 16px;
+      background: rgba(255,228,181,0.1);
+      border: 1px solid rgba(255,228,181,0.3);
+    }
+    
+    .sponsor-link:hover {
+      color: #FFF;
+      background: rgba(255,255,255,0.2);
+    }
+    
+    .sponsor-logo {
+      width: 80px;
+      max-width: 100%;
+      margin-top: 8px;
+    }
+    
+    .blog-post {
+      border: 2px inset #D4D0C8;
+      margin-bottom: 16px;
+      background: white;
+    }
+    
+    .post-header {
+      background: linear-gradient(to bottom, #E8F4FD 0%, #D0E7F7 100%);
+      padding: 8px 12px;
+    }
+    
+    .post-title {
+      margin: 0;
+      color: #000080;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    
+    .post-date {
+      color: #666;
+      font-size: 10px;
+      margin: 2px 0 0 0;
+    }
+    
+    .post-body {
+      padding: 12px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    
+    .post-text {
+      flex: 1;
+      text-align: right;
+      line-height: 1.4;
+      color: #333;
+      font-size: 11px;
+    }
+    
+    .post-text p {
+      margin: 0 0 8px 0;
+    }
+    
+    .post-text p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .post-image {
+      flex-shrink: 0;
+      width: 200px;
+    }
+    
+    .post-img {
+      border: 2px inset #C0C0C0;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    .fieldset-style {
+      border: 2px inset #D4D0C8;
+      padding: 8px;
+      margin: 8px 0;
+      background: #F5F2E8;
+    }
+    
+    .fieldset-legend {
+      background: #ECE9D8;
+      padding: 2px 6px;
+      font-weight: bold;
+      color: #000080;
+      font-size: 11px;
+      border: 1px outset #D4D0C8;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+    
+    h1 {
+      color: #000080;
+      font-size: 14px;
+      margin: 12px 0 8px 0;
+      font-weight: bold;
+    }
+    
+    h3 {
+      color: #000080;
+      margin: 8px 0 4px 0;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    
+    a {
+      color: #0000EE;
+      text-decoration: underline;
+    }
+    
+    a:hover {
+      color: #FF0000;
+    }
+    
+    a:visited {
+      color: #551A8B;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      
+      .window {
+        width: 98%;
+      }
+      
+      .post-body {
+        flex-direction: column;
+      }
+      
+      .post-image {
+        width: 100%;
+      }
+      
+      .post-text {
+        text-align: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      body {
+        padding: 5px;
+      }
+      
+      .taskbar {
+        height: 28px;
+      }
+      
+      .start-button {
+        height: 22px;
+        font-size: 10px;
+        padding: 0 16px 0 6px;
+      }
+      
+      .title-bar {
+        height: 26px;
+        font-size: 10px;
+      }
+      
+      .control-btn {
+        width: 18px;
+        height: 18px;
+        font-size: 9px;
+      }
+      
+      .content-area {
+        padding: 8px;
+      }
+      
+      .post-text {
+        font-size: 10px;
+      }
+    }
+    
+    /* XP-style scrollbar */
+    ::-webkit-scrollbar {
+      width: 16px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #ECE9D8;
+      border: 1px inset #D4D0C8;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border: 1px outset #D4D0C8;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to bottom, #F5F2E8 0%, #ECE9D8 100%);
+    }
+    
+    ::-webkit-scrollbar-button {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border: 1px outset #D4D0C8;
+      height: 16px;
+    }
+    
+    ::-webkit-scrollbar-button:hover {
+      background: linear-gradient(to bottom, #F5F2E8 0%, #ECE9D8 100%);
+    }
+        .xp-button {
+      background: linear-gradient(to bottom, #ECE9D8 0%, #D4D0C8 100%);
+      border: 1px outset #D4D0C8;
+      color: black;
+      padding: 4px 12px;
+      font-family: "Tahoma", sans-serif;
+      font-size: 11px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      min-width: 80px;
+      text-align: center;
+    }
+    
+    .xp-button:hover {
+      background: linear-gradient(to bottom, #F5F2E8 0%, #ECE9D8 100%);
+      border: 1px outset #E3DFD8;
+    }
+    
+    .xp-button:active {
+      border: 1px inset #D4D0C8;
+      background: linear-gradient(to bottom, #D4D0C8 0%, #C8C4B8 100%);
+    }
+  </style>
+</head>
+<body>
+  <br><br>
+  <div class="window">
+    <div class="title-bar">
+      <div class="window-title">
+       <a href="index.html"><button class="xp-button">🏠 صفحه اصلی</button></a>
+      </div>
+    </div>
+
+    <div class="content-area">
+      <div class="sponsor-section">
+        <a href="https://milli.gold/" class="sponsor-link">
+          با هر قیمتی طلا بخر با <strong>میلی گلد</strong>
+        </a>
+        <br>
+        <img src="MilliLogo.png" alt="Milli Logo" class="sponsor-logo">
+      </div>
+
+      <div class="fieldset-style">
+        <div class="blog-post">
+          <div class="post-header">
+            <h3 class="post-title">جمله ی منطقی روز</h3>
+            <div class="post-date">NooriPlayer2024</div>
+          </div>
+          <div class="post-body">
+            <div class="post-text">
+              <p>
+                اگه نارنجک یعنی نارنج کوچک، چرا نارنجک از نارنج بزرگتره؟
+              </p>
+              <p>
+                این یکی از اون سوالایی هست که آدم رو وادار به فکر میکنه. زبان فارسی پر از این جور چیزاست.
+                مثل اینکه چرا "دست‌فروش" کسی هست که چیزی میفروشه نه دستش رو!
+              </p>
+            </div>
+            <div class="post-image">
+              <img src="b1.jpg" class="post-img" alt="تصویر پست اول">
+            </div>
+          </div>
+        </div>
+
+    <div class="status-bar">
+      <span>برای امیر علی نوری - 09360140688</span>
+    </div>
+  </div>
+    <br><br>
+</body>
+</html>
